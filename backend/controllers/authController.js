@@ -23,8 +23,7 @@ export const signup = async (req,res, next) => {
             email,
             password: hashed,
         });
-        res.status(201).json({ message: "User Created"});
-        res.json(user);
+        res.status(201).json({ message: "User Created" });
     } catch (err) {
         res.status(500).json("Signup error");
         next(err);
