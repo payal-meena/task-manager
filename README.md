@@ -4,12 +4,14 @@ A full stack task management app built with the MERN stack. Users can sign up, l
 
 ## Live Demo
 
-- Frontend: `https://your-app.vercel.app` ← replace after deployment
-- Backend: `https://your-api.onrender.com` ← replace after deployment
+- Frontend: `https://task-manager-gamma-weld.vercel.app/`
+- Backend: `https://task-manager-stue.onrender.com/`
 
 ## Screenshots
 
-> Add screenshots here after deployment
+> ![alt text](image.png)
+> ![alt text](image-1.png)
+> ![alt text](image-2.png)
 
 ## Features
 
@@ -114,4 +116,4 @@ App will run at `http://localhost:5173`
 
 ## Author
 
-Made by [Your Name] — [Your GitHub Profile Link]
+Payal Meena 
