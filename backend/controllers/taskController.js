@@ -16,22 +16,8 @@ export const createTask = async (req, res, next) => {
 
 export const getTasks = async (req,res, next ) => {
     try {
-        const page = Number(req.query.page) || 1;
-        const limit = 5;
-        const skip = (page - 1) * limit;
-
-        const tasks = await Task.find({ userId: req.user })
-        .skip(skip)
-        .limit(limit)
-        .sort({ createdAt: -1});
-
-        const total = await Task.countDocuments({ userId: req.user});
-
-        res.json({
-             tasks, 
-             totalPages: Math.ceil(total / limit),
-             currentPage: page,
-        });
+        const tasks = await Task.find({ userId: req.user }).sort({ createdAt: -1 });
+        res.json(tasks);
 
     } catch (err) {
         res.status(500).json("Error fetching tasks");

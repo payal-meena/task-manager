@@ -126,7 +126,7 @@ const Dashboard = () => {
       setLoading(true);
       setError("");
       const res = await api.get("/api/tasks");
-      setTasks(res.data);
+      setTasks(Array.isArray(res.data) ? res.data : res.data.tasks ?? []);
     } catch (err) {
       if (err.response?.status === 401) {
         localStorage.removeItem("token");
